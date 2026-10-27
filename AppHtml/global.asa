@@ -1,6 +1,3 @@
-<OBJECT RUNAT=Server SCOPE=Session ID=WebAppServerSession PROGID="WebAppServer.Session.25.0">
-</OBJECT>
-
 <SCRIPT LANGUAGE=VBScript RUNAT=Server>
 SUB Session_OnStart
     WebAppServerSession.PageScopedSession=True
