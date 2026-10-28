@@ -1,5 +1,5 @@
 ﻿// C:\DataFlex Projects\FutbolWebApp\AppSrc\SelectEquipo.wo
-// Equipos
+// Equipo
 //
 
 Use cWebView.pkg
@@ -14,7 +14,7 @@ Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
 
 Object oSelectEquipo is a cWebView
-    Set psCaption to "Equipos"
+    Set psCaption to "Equipo"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtSelect
     Set piColumnCount to 12
@@ -75,8 +75,7 @@ Object oSelectEquipo is a cWebView
 
         End_Object 
 
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-//        WebRegisterPath ntNavigateForward oSelectView
+        WebRegisterPath ntNavigateForward oZoomEquipo
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -84,9 +83,7 @@ Object oSelectEquipo is a cWebView
 
             Case Begin
                 Case (NavigateData.eNavigateType = nfFromParent)
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
-//                    Send NavigateForward of oSelectView Self
+                    Send NavigateForward of oZoomEquipo Self
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -98,9 +95,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
                     Case Break
 
                 Case Else // must be nfUndefined
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
-//                    Send NavigateForward of oSelectView Self
+                    Send NavigateForward of oZoomEquipo Self
 
             Case End
         End_Procedure
@@ -147,6 +142,8 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
         Case Begin
             Case (NavigateData.eNavigateType = nfFromParent)
                 // If from parent, this is a constrained drill down
+                // If Row select does main-zoom we don't need this
+                WebSet pbRender of oDetailButton to False
                 Case Break
 
             Case (NavigateData.eNavigateType = nfFromChild)
@@ -160,6 +157,8 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
 
             Case Else // must be nfUndefined
                 // This may be the start of a drilldown query or this may be used for some kind of custom query.
+                // If Row select does main-zoom we don't need this
+                WebSet pbRender of oDetailButton to False
 
         Case End
 
