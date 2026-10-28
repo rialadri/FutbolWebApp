@@ -1,0 +1,17 @@
+# Compilados y temporales de DataFlex
+Programs/*.exe
+Programs/*.dbg
+Programs/*.log
+AppSrc/*.prn
+AppSrc/*.dep
+AppSrc/*.manifest
+*.err
+*.bak
+*.tmp
+Data/*.log
+
+# Preferencias personales de Studio
+IdeSrc/*.dsk
+
+# Bloqueo de Studio mientras está abierto
+IdeSrc/Workspace.loc

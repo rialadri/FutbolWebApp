@@ -9,3 +9,4 @@ DDSrcPath=.\DDSrc
 HelpPath=.\Help
 ProgramPath=.\Programs
 FileList=.\Data\Filelist.cfg
+Description=Futbol Project DataControl

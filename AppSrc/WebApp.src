@@ -15,7 +15,7 @@ Object oWebApp is a cWebApp
     // to drill down style views.
     Set peApplicationStyle to wvsDrillDown   
     Set peApplicationStateMode to asmHistoryAndUrls 
-    Set psEncryptPassword to "tEO7]WO|WWP4b|:scn#VO0cL-V%#vKi>_v1v&<{o"
+    Set psEncryptPassword to "TBE8gTpEM2>{NX|pb8Tm#~<z96m&?TcP&:h._Lt,"
 
     Object oViewStack is a cWebViewStack
     End_Object
