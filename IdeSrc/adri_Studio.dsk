@@ -1,13 +1,13 @@
 [Workspace]
 CurrentProject=WebApp.src
 Location=C:\DataFlex Projects\FutbolWebApp\IdeSrc\adri_Studio.dsk
-CreateNew=-1
+CreateNew=3
 [TabWindows]
 GroupCount=1
 HorizontalGroups=1
 [TabGroup0]
 GroupSize=40
-SelectedTab=1
+SelectedTab=3
 [Window0]
 Filename=Workspace Dashboard
 ViewType=101
@@ -27,4 +27,26 @@ Right=609
 CursorLine=28
 CursorColumn=17
 TabIndex=1
+TabGroup=0
+[Window2]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomLiga.wo
+ViewType=1
+Top=21
+Left=0
+Bottom=690
+Right=609
+CursorLine=0
+CursorColumn=0
+TabIndex=2
+TabGroup=0
+[Window3]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\SelectLiga.wo
+ViewType=1
+Top=21
+Left=0
+Bottom=690
+Right=609
+CursorLine=25
+CursorColumn=27
+TabIndex=3
 TabGroup=0
