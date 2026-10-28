@@ -21,6 +21,13 @@ Class cequipoDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
 
+        Set Key_Field_State Field equipo.ID to True
+
+        Set Field_Option Field equipo.Nombre DD_REQUIRED to True
+        Set Field_Label_Short Field equipo.Nombre to "Equipo"
+
+        Set Field_Label_Short Field equipo.LigaID to "Liga"
+
     End_Procedure
 
 End_Class

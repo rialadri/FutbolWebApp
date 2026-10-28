@@ -16,6 +16,19 @@ Class cligaDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
 
+        Set Key_Field_State Field liga.ID to True
+
+        Set Field_Option Field liga.Nombre DD_REQUIRED to True
+        Set Field_Label_Short Field liga.Nombre to "Liga"
+
+        Set Field_Option Field liga.Pais DD_REQUIRED to True
+        Set Field_Label_Short Field liga.Pais to "País"
+
+        Set Field_Option Field liga.Equipos DD_NOENTER to True
+        Set Field_Label_Short Field liga.Equipos to "Equipos"
+
+        Set Field_Label_Short Field liga.EquiposMax to "Max. Equipos"
+
     End_Procedure
 
 End_Class
