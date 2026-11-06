@@ -12,6 +12,8 @@ Use SelectEquipo.wo
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
 Use cjugadorDataDictionary.dd
+Use cWebButton.pkg
+Use SelectPosicion.wo
 
 Object oZoomJugador is a cWebView
     Set piColumnCount to 12
@@ -79,6 +81,17 @@ Object oZoomJugador is a cWebView
                 Send NavigatePath
             End_Procedure
         End_Object 
+
+        Object oWebButton1 is a cWebButton
+            Set piColumnSpan to 3
+            Set psCaption to "Ver Posiciones"
+            
+        WebRegisterPath ntNavigateForwardCustom oSelectPosicion
+        
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
