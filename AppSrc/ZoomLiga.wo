@@ -9,6 +9,9 @@ Use cWebMenuItem.pkg
 Use cWebForm.pkg
 
 Use cligaDataDictionary.dd
+Use cWebButton.pkg
+
+Register_Object oSelectEquipo
 
 Object oZoomLiga is a cWebView
     Set piColumnCount to 12
@@ -61,6 +64,18 @@ Object oZoomLiga is a cWebView
             Set peLabelPosition to lpTop
             Set psLabel to "EquiposMax"
         End_Object 
+
+        Object oWebButton1 is a cWebButton
+           Set piColumnSpan to 2
+           Set psCaption to "Ver Equipos"
+            Set piColumnIndex to 0
+       
+           WebRegisterPath ntNavigateForward oSelectEquipo
+       
+           Procedure OnClick
+               Send NavigatePath
+           End_Procedure
+       End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
