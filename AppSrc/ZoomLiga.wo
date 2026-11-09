@@ -10,6 +10,9 @@ Use cWebForm.pkg
 
 Use cligaDataDictionary.dd
 Use cWebButton.pkg
+Use cWebList.pkg
+Use cWebColumn.pkg
+Use cequipoDataDictionary.dd
 
 Register_Object oSelectEquipo
 
@@ -24,6 +27,10 @@ Object oZoomLiga is a cWebView
 
     Object oliga_DD is a cligaDataDictionary
     End_Object 
+    Object oequipo_DD is a cequipoDataDictionary
+        Set DDO_Server to oliga_DD
+        Set Constrain_File to liga.File_Number
+    End_Object
 
     Set Main_DD To oliga_DD
     Set Server  To oliga_DD
@@ -70,13 +77,25 @@ Object oZoomLiga is a cWebView
            Set psCaption to "Ver Equipos"
             Set piColumnIndex to 0
        
-           WebRegisterPath ntNavigateForward oSelectEquipo
-       
-           Procedure OnClick
-               Send NavigatePath
-           End_Procedure
-       End_Object
-    End_Object 
+                   WebRegisterPath ntNavigateForward oSelectEquipo
+
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+
+        Object oListaEquipos is a cWebList
+            Set Server to oequipo_DD
+            Set piColumnSpan to 12
+            Set piHeight to 250
+
+            Object oequipoNombre is a cWebColumn
+                Entry_Item equipo.Nombre
+                Set psCaption to "Equipos de la liga"
+            End_Object
+        End_Object
+
+    End_Object
 
     Object oActionGroup is a cWebMenuGroup
 
