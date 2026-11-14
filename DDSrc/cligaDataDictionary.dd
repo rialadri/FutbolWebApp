@@ -20,14 +20,18 @@ Class cligaDataDictionary is a DataDictionary
 
         Set Field_Option Field liga.Nombre DD_REQUIRED to True
         Set Field_Label_Short Field liga.Nombre to "Liga"
+        Set Status_Help Field liga.Nombre to "Nombre de la liga."
 
         Set Field_Option Field liga.Pais DD_REQUIRED to True
         Set Field_Label_Short Field liga.Pais to "País"
+        Set Status_Help Field liga.Pais to "País de la liga."
 
         Set Field_Option Field liga.Equipos DD_NOENTER to True
         Set Field_Label_Short Field liga.Equipos to "Equipos"
+        Set Status_Help Field liga.Equipos to "Número de equipos de la liga."
 
         Set Field_Label_Short Field liga.EquiposMax to "Max. Equipos"
+        Set Status_Help Field liga.EquiposMax to "Número máximo de equipos de la liga."
 
     End_Procedure
 
