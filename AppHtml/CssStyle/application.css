@@ -12,12 +12,14 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=sw
 
 .Verde.Tile .WebCon_Sizer, .Azul.Tile .WebCon_Sizer {
     border-radius: 8px;
-    transition: transform 0.15s, background 0.15s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
 }
 .Verde.Tile:hover .WebCon_Sizer, .Azul.Tile:hover .WebCon_Sizer {
     filter: brightness(1.15);
     cursor: pointer;
-    transform: translateY(-3px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 .Verde.Tile .WebCon_Sizer, .Azul.Tile .WebCon_Sizer {
     display: flex;
