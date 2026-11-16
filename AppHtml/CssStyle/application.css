@@ -8,12 +8,16 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=sw
 .Azul.Tile:hover .WebCon_Sizer { background: #0d47a1; }
 
 .Verde.Tile .Tile_Title, .Azul.Tile .Tile_Title,
-.Verde.Tile .Tile_Subtitle, .Azul.Tile .Tile_Subtitle { color: #ffffff; }
+.Verde.Tile .Tile_Subtitle, .Azul.Tile .Tile_Subtitle { color: #ffffff; top: 0; }
 
 .Verde.Tile .WebCon_Sizer, .Azul.Tile .WebCon_Sizer {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .Verde.Tile:hover .WebCon_Sizer, .Azul.Tile:hover .WebCon_Sizer {
     filter: brightness(1.15);
@@ -21,15 +25,9 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=sw
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-.Verde.Tile .WebCon_Sizer, .Azul.Tile .WebCon_Sizer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .Tile .Tile_Subtitle:empty { display: none; }
 
 .Tile .Tile_Title { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.3em; }
 .Tile .Tile_Subtitle { font-family: 'Montserrat', sans-serif; }
-.Verde.Tile .Tile_Title, .Azul.Tile .Tile_Title,
-.Verde.Tile .Tile_Subtitle, .Azul.Tile .Tile_Subtitle { top: 0; }
+
